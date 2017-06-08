@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="anime.min.js"></script>
+	<style>
+		body {
+			background: #ddd;
+		}
+		#cssSelector {
+			background: #fff;
+			height: 200px;
+			width: 20px;
+		}
+		.el{
+		position: relative;
+		height: 200px;
+		background: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="cssSelector">
+	  <div class="line">
+	    <div class="square el"></div>
+	  </div>
+	</div>
+</body>
+<script>
+	anime({
+	  targets: '#cssSelector .el',
+	  translateX: [
+	    { value: 100, duration: 1200 },
+	    { value: 0, duration: 800 }
+	  ],
+	  rotate: '1turn',
+	  // backgroundColor: '#ddd',
+	  duration: 2000,
+	  loop: true
+	});
+	// var cssSelector = anime({
+	//   targets: '#cssSelector .el',
+	//   left: 500
+	// });
+</script>
+</html>
